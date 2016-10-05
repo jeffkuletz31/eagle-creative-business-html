@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="img/apple_icons_57x57.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple_icons_72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple_icons_114x114.png">
+<title>Eagle Creative | Premium Html Template</title>
+<link href="http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,100,400italic,700,500,900" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/theme.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/custom.css" type="text/css" media="all" />
+</head>
+<body>
+	<div class="global_count_wrapper">
+    
+    	<div class="coming_soon_top">
+        	<div class="container">
+            	<div class="logo_sect">
+                    <a href="index.html" class="logo"><img src="img/logo.png" class="logo_def" alt="" /><img src="img/retina/logo.png" class="logo_retina" alt="" /></a>                
+                </div>
+                <div class="fright">
+                	<div class="coming_soon_socials">
+                        <ul>
+                            <li><a class="soc_fb" href="javascript:void(0);"><i class="icon-facebook"></i></a></li>
+                            <li><a class="soc_tweet" href="javascript:void(0);"><i class="icon-twitter"></i></a></li>
+                            <li><a class="soc_google" href="javascript:void(0);"><i class="icon-google-plus"></i></a></li>
+                            <li><a class="soc_dribbble" href="javascript:void(0);"><i class="icon-dribbble"></i></a></li>
+                            <li><a class="soc_pinterest" href="javascript:void(0);"><i class="icon-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>    	
+        
+        <div class="count_title">
+        	<div class="container">
+        		<h1>Our Website Is Under Construction, We Are Working Very Hard to Give You the Best Experience</h1>
+            </div>
+        </div>       
+        					
+        <div class="countdown_wrapper">
+            <div id="countdown"></div>
+        </div> 
+            
+		<div class="count_container_wrapper">
+            <div class="container">
+                <div class="notify_shortcode">
+                	<div class="row row20">
+                        <form action="javascript:void(0);" method="post">
+                            <div class="col-sm-5"><input type="text" name="name" value="" placeholder="Name*" /></div>
+                            <div class="col-sm-5"><input type="email" name="email" value="" placeholder="Email*" /></div>
+                            <div class="col-sm-2"><input type="submit" value="Notify Me" /></div>                                                
+                        </form>
+                    </div>
+                </div>                 
+             </div>
+        </div>
+        
+    </div>
+    
+    <div class="custom_bg img_bg coming_soon"></div>    
+       
+    <script type="text/javascript" src="js/jquery.min.js"></script>	
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>    
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/modules.js"></script>	
+	<script type="text/javascript" src="js/theme.js"></script>
+    <script type="text/javascript" src="js/jquery.countdown.min.js"></script>
+    <script>		
+		function centerWindow() {
+			"use strict";
+			var globalWrap = jQuery('.global_count_wrapper');
+			var countWrapper = jQuery('.countdown_wrapper');
+			var countTitle = jQuery('.count_title');
+			var window_h = jQuery(window).height();
+			var countContainer = jQuery('.count_container_wrapper');
+			var freeSpace = (window_h - countWrapper.height() - countTitle.height() - countContainer.height())/3.178;
+			countTitle.css('top', freeSpace+'px');
+			countContainer.css('bottom', freeSpace +'px');
+			globalWrap.css('height', window_h + 'px');			
+			var setMiddle = freeSpace*1.522 + countTitle.height();		
+			countWrapper.css('top', setMiddle+'px');			
+		}
+		jQuery(function () {
+			"use strict";
+			var austDay = new Date();				
+			var austDay = new Date(2015, 12-1, 29); //year, month-1, day
+			jQuery('#countdown').countdown({
+				until: austDay,
+				padZeroes: true
+			});
+		});
+		jQuery(document).ready(function(){
+			"use strict";
+			centerWindow();
+		});
+		jQuery(window).resize(function(){
+			"use strict";
+			centerWindow();
+		});
+	</script>   
+</body>
+</html>
